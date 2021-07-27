@@ -26,9 +26,9 @@ input, #submitUserInputBtn, #nextEquBtn {
 .userInput {
     display: inline-block;
     border-radius: 10px;
-    border: 2px solid #b088f9;
+    border: 2px solid #88ecf9;
     padding: 5px;
-    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 0px 24px rgba(136, 236, 249, 0.5);
 }
 
 #userAnwserInput {
@@ -41,7 +41,7 @@ input, #submitUserInputBtn, #nextEquBtn {
     font-size: 16px;
     line-height: 38px;
     width: 60px;
-    background-color: #da9ff9;
+    background-color: #88ecf9;
 }
 
 #answerContainer {
@@ -64,10 +64,10 @@ input, #submitUserInputBtn, #nextEquBtn {
 #nextEquBtn {
     line-height: 38px;
     font-size: 22px;
-    background-color: #da9ff9;
+    background-color: #88ecf9;
     border-radius: 10px;
     width: 65px;
-    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 0px 24px rgba(136, 236, 249, 0.5);
 }
 
 .sliderContainer {
