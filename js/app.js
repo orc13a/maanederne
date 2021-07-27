@@ -1,4 +1,4 @@
-let pickedNumber = randomNum(0, 1); // 0 = monthNumbers && 1 = monthNames 
+let pickedNumber = null; // 0 = monthNumbers && 1 = monthNames 
 let choosenArray = []; // Here will the choosen array be saved
 let correctAnwserIndex = 0;
 let correctAnwser = '';
@@ -18,6 +18,7 @@ const monthNumbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '
 window.onload = () => {
     pickArray();
     pickFromArray();
+    console.log(correctAnwserIndex);
 }
 
 // To get the random number
@@ -27,6 +28,8 @@ function randomNum(min, max) {
 }
 
 function pickArray() {
+    pickedNumber = randomNum(0, 1);
+
     if (pickedNumber === 1) {
         choosenArray = monthNames;
     } else {
@@ -59,22 +62,11 @@ submitAnwserBtn.addEventListener('click', () => {
     // Check input
     // If the input field is not empty and is a number
     if (inputValue.length > 0) {
-        // A switch to see if the text was a month number or name
-        switch (pickedNumber) {
-            case 0: 
-                if (monthNames.indexOf(inputValue) === correctAnwserIndex) {
-                    answerDisplay.innerHTML = `<span class="correct">Rigtigt</span>`;
-                } else {
-                    answerDisplay.innerHTML = `<span class="incorrect">Det rigtige svar er: <span class="correctAnwser">${correctAnwser}</span></span>`;
-                }
-            case 1:
-                if (monthNames.indexOf(inputValue) === correctAnwserIndex) {
-                    answerDisplay.innerHTML = `<span class="correct">Rigtigt</span>`;
-                } else {
-                    answerDisplay.innerHTML = `<span class="incorrect">Det rigtige svar er: <span class="correctAnwser">${correctAnwser}</span></span>`;
-                }
-            default:
-                break;
+        // Check if input is correct
+        if (inputValue === correctAnwser) {
+            answerDisplay.innerHTML = `<span class="correct">Rigtigt</span>`;
+        } else {
+            answerDisplay.innerHTML = `<span class="incorrect">Det rigtige svar er: <span class="correctAnwser">${correctAnwser}</span></span>`;
         }
 
         // Show container
