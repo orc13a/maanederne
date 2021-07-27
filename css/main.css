@@ -70,6 +70,10 @@ input, #submitUserInputBtn, #nextEquBtn {
     box-shadow: 0px 0px 24px rgba(136, 236, 249, 0.5);
 }
 
+#nextEquBtn:hover {
+    box-shadow: 0px 0px 24px rgba(136, 236, 249, 1);
+}
+
 .sliderContainer {
     margin-top: 50px;
 }
